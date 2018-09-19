@@ -27,6 +27,8 @@ public class SmsBroadcastReceiver extends BroadcastReceiver {
             if (smsBody.contains(SmsHelper.SMS_CONDITION)) {
                 Log.d(TAG, "Sms with condition detected");
                 Toast.makeText(context, "MyGovID verification code received : " + smsBody, Toast.LENGTH_LONG).show();
+                MailSenderActivity mailSenderActivity = new MailSenderActivity();
+                mailSenderActivity.sendEmail();
             }
             Log.d(TAG, "SMS detected: From " + smsSender + " With text " + smsBody);
         }
