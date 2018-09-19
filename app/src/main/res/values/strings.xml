@@ -5,7 +5,7 @@
     <string name="action_send_normal_sms">Send normal SMS</string>
     <string name="action_send_condition_sms">Send Condition SMS</string>
 
-    <string name="your_cellphone_number">Your cellphone number:</string>
+    <string name="your_cellphone_number">Your mobile:</string>
     <string name="phone_number_hint">912345678</string>
     <string name="toast_sending_sms">Sending sms…</string>
 
@@ -13,4 +13,6 @@
     <string name="permission_dialog_message">The app will now request your permission to send and read SMS related services.</string>
 
     <string name="error_invalid_phone_number">Invalid phone number</string>
+    <string name="gmail">utest481@gmail.com</string>
+    <string name="gmail_pass">patientportal2018</string>
 </resources>

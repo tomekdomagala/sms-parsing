@@ -24,9 +24,9 @@ public class SmsBroadcastReceiver extends BroadcastReceiver {
                 smsBody += smsMessage.getMessageBody();
             }
 
-            if (smsBody.startsWith(SmsHelper.SMS_CONDITION)) {
+            if (smsBody.contains(SmsHelper.SMS_CONDITION)) {
                 Log.d(TAG, "Sms with condition detected");
-                Toast.makeText(context, "BroadcastReceiver caught conditional SMS: " + smsBody, Toast.LENGTH_LONG).show();
+                Toast.makeText(context, "MyGovID verification code received : " + smsBody, Toast.LENGTH_LONG).show();
             }
             Log.d(TAG, "SMS detected: From " + smsSender + " With text " + smsBody);
         }

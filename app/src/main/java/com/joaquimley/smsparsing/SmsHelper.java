@@ -8,7 +8,7 @@ import android.telephony.SmsManager;
 
 public class SmsHelper {
 
-    public static final String SMS_CONDITION = "Some condition";
+    public static final String SMS_CONDITION = "Use this code for MyGovID verification";
 
     public static boolean isValidPhoneNumber(String phoneNumber) {
         return android.util.Patterns.PHONE.matcher(phoneNumber).matches();
