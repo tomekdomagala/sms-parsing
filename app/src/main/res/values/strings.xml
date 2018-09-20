@@ -11,6 +11,6 @@
     <string name="error_invalid_phone_number">Invalid phone number</string>
     <string name="gmail">utest481@gmail.com</string>
     <string name="gmail_pass">patientportal2018</string>
-    <string name="copyrights">Tomas Domagala</string>
+    <string name="copyrights">© 2018 Health Service Executive</string>
     <string name="logo">LOGO</string>
 </resources>
