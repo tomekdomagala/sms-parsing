@@ -5,7 +5,6 @@ import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
@@ -34,23 +33,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             showRequestPermissionsInfoAlertDialog();
         }
 
-        initViews();
+/*        initViews();
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         mUserMobilePhone = mSharedPreferences.getString(PREF_USER_MOBILE_PHONE, "");
         if (!TextUtils.isEmpty(mUserMobilePhone)) {
             mNumberEditText.setText(mUserMobilePhone);
-        }
+        }*/
     }
 
     private void initViews() {
-        mNumberEditText = (EditText) findViewById(R.id.et_number);
+/*        mNumberEditText = (EditText) findViewById(R.id.et_number);
         findViewById(R.id.btn_normal_sms).setOnClickListener(this);
-        findViewById(R.id.btn_conditional_sms).setOnClickListener(this);
+        findViewById(R.id.btn_conditional_sms).setOnClickListener(this);*/
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
+/*        switch (v.getId()) {
             case R.id.btn_conditional_sms:
                 if (!hasValidPreConditions()) return;
                 checkAndUpdateUserPrefNumber();
@@ -66,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 SmsHelper.sendDebugSms(String.valueOf(mNumberEditText.getText()), "The broadcast should not show a toast for this");
                 Toast.makeText(getApplicationContext(), R.string.toast_sending_sms, Toast.LENGTH_SHORT).show();
                 break;
-        }
+        }*/
     }
 
     /**

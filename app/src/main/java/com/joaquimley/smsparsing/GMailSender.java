@@ -1,5 +1,7 @@
 package com.joaquimley.smsparsing;
 
+import android.os.StrictMode;
+
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -60,6 +62,15 @@ public class GMailSender extends javax.mail.Authenticator {
                 message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(recipients));
             else
                 message.setRecipient(Message.RecipientType.TO, new InternetAddress(recipients));
+
+            int SDK_INT = android.os.Build.VERSION.SDK_INT;
+            if (SDK_INT > 8)
+            {
+                StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
+                        .permitAll().build();
+                StrictMode.setThreadPolicy(policy);}
+
+
             Transport.send(message);
         }catch(Exception e){
             e.printStackTrace();

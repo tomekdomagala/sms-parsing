@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -10,40 +11,17 @@
     tools:context="com.joaquimley.smsparsing.MainActivity">
 
 
-    <TextView
-        android:visibility="invisible"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/your_cellphone_number" />
-
-    <EditText
-        android:visibility="invisible"
-        android:id="@+id/et_number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/phone_number_hint"
-        android:inputType="number" />
-
-    <LinearLayout
-        android:visibility="invisible"
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:layout_gravity="bottom"
+        android:contentDescription="@string/logo"
+        app:srcCompat="@mipmap/logo" />
 
-        <Button
-            android:id="@+id/btn_normal_sms"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/action_send_normal_sms" />
-
-        <Button
-            android:id="@+id/btn_conditional_sms"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/action_send_condition_sms" />
-
-    </LinearLayout>
-
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/copyrights" />
 </LinearLayout>
