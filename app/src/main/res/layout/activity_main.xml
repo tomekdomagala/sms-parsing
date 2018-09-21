@@ -14,7 +14,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="507dp"
+        android:layout_height="382dp"
         android:layout_gravity="bottom"
         android:contentDescription="@string/logo"
         app:srcCompat="@mipmap/logo" />
